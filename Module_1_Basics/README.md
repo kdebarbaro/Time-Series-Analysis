@@ -1,10 +1,11 @@
 # Module 1: Time Series Programming Basics
 
-With the seven scripts in this module, you can begin importing and manipulating the most common types of temporal data collected in behavioral research, even with little or no programming experience. The most common types of temporal data collected in developmental behavioral science research are event data and timeseries data. The scripts in this module will guide users through the basic processes of importing event data from csv files, indexing/slicing event and time seires data in various ways, converting event data from/to time series data, etc.
+The seven scripts in this module are designed to allow those with little or no programming experience to begin importing and manipulating the most common types of temporal data collected in behavioral research, event data and timeseries data. The scripts in this module will guide users through the basic processes of importing event data from csv files, indexing/slicing event and time series data in various ways, converting event data from/to time series data, etc.
 
-Additionally, the first three scripts are designed to be run one line at a time to educate novice programmers, and the first two scripts contain practice problems with answers. Users who work through these scripts step-by-step will gain skills and confidence to combine and create variations of the provided scripts to accommodate their own data and research questions. 
-	 	
-For novice users, we suggest working through the scripts in the order listed below. There are seven scripts in total, each described below in detail. 
+Additionally, the first three scripts are designed to be run one line at a time to educate novice programmers, and the first two scripts contain practice problems with answers. Users who work through these scripts step-by-step will gain skills and confidence to combine and create variations of the provided scripts to accommodate their own data and research questions.
+
+For novice users, we suggest working through scripts 1-4 in the order listed below, and using scripts 5-7 as needed for transforming exported event data into timeseries or spike train data formats for use in subsequent modules or other applications. 
+
 
 Script 1: [programmingBasics.m](programmingBasics.m)
 
@@ -355,10 +356,10 @@ Note: To modify the script to work with other data, change the data parameters i
 
 **Script 6: *convertTimeseries2Events.m***
 
-This script converts time series data into event format temporal data and stores the output in the data folder. It follows the exact same process flow with the previous script, so we will omit the detailed explanation here. Detailed comments are provided in the script.
+This script converts time series data into event data format and stores the output in the data folder. It follows the exact same process flow with the previous script, so we will omit the detailed explanation here. Detailed comments are provided in the script.
 
 **Script 7: *convertEvents2Pointprocess.m***
 
-This script converts event data into point process data which is a specific type of time series data with only 1 or 0 as its categories. Because point process data have only binary values (1 or 0) as its categories, users need to specify the event category that they would like to be converted into process process. The process/logic flow is also similar to the previous two scripts and detailed instructions can be found in the script.
+This script converts event data into binary spike train data which is a specific type of time series data with only 1 or 0 as its categories. Because spike train data have only binary values (1 or 0) as its categories, for datastreams with multiple discrete event types users will need to specify the event category that they would like to have converted into. The logic flow is similar to the previous two scripts and detailed instructions can be found in the script.
 
-In addition, because point process is a specific type of time series data, users can use ***convertTimeseries2Events.m*** if one needs to convert process process data back to event format temporal data.
+In addition, because spike trains are a specific type of time series data, users can use ***convertTimeseries2Events.m*** if one needs to convert spike train data back to event data format.
